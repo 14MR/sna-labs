@@ -9,6 +9,7 @@ services:
       - "2222:22"
     volumes:
       - ./authorized_keys:/root/.ssh/authorized_keys
+      - ./sshd_config:/etc/ssh/sshd_config
     networks:
       - ssh
       - backend

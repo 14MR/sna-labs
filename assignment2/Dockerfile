@@ -7,9 +7,6 @@ RUN apk --update add --no-cache openssh \
 
 RUN /usr/bin/ssh-keygen -A # generate keys if they do not exist
 
-COPY sshd_config /etc/ssh/sshd_config
-RUN chmod a-w /etc/ssh/sshd_config
-
 EXPOSE 22
 
 CMD ["/usr/sbin/sshd","-D"]
